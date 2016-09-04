@@ -42,7 +42,7 @@ class m160904_141243_create_kota_table extends Migration
         // path tempat file csv berada
         $kota = Yii::getAlias('@app/migrations/kota.csv');
         
-        // baca file csv menggunakan lebrary league\csv
+        // baca file csv menggunakan library league\csv
         $reader = Reader::createFromPath($kota);
         
         // insert data kota kedalam tabel provinsi
@@ -65,7 +65,7 @@ class m160904_141243_create_kota_table extends Migration
         // path tempat file csv berada
         $kota = Yii::getAlias('@app/migrations/kota.csv');
         
-        // baca file csv menggunakan lebrary league\csv
+        // baca file csv menggunakan library league\csv
         $reader = Reader::createFromPath($kota);
         
         // hapus data provinsi dari tabel provinsi

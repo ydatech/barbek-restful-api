@@ -21,7 +21,7 @@ class m160904_132618_create_provinsi_table extends Migration
         // path tempat file csv berada 
         $provinsi = Yii::getAlias('@app/migrations/provinsi.csv');
 
-        // baca file csv menggunakan lebrary league\csv
+        // baca file csv menggunakan library league\csv
         $reader = Reader::createFromPath($provinsi);
 
         // insert data provinsi kedalam tabel provinsi
@@ -42,7 +42,7 @@ class m160904_132618_create_provinsi_table extends Migration
          // path tempat file csv berada 
         $provinsi = Yii::getAlias('@app/migrations/provinsi.csv');
 
-        // baca file csv menggunakan lebrary league\csv
+        // baca file csv menggunakan library league\csv
         $reader = Reader::createFromPath($provinsi);
 
          // hapus data provinsi dari tabel provinsi
