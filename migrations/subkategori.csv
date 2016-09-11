@@ -1,0 +1,64 @@
+1,1,Mobil Bekas
+2,1,Aksesoris
+3,1,Audio Mobil
+4,1,Sparepart
+5,1,Velg & Ban
+6,2,Motor Bekas
+7,2,Aksesoris
+8,2,Helm
+9,2,Sparepart
+10,3,Rumah
+11,3,Apartemen
+12,3,Indekos
+13,3,Bangunan Komersil
+14,3,Tanah
+15,3,Properti Lainnya
+16,4,Fahion Pria
+17,4,Fashin Wanita
+18,4,Jam Tangan
+19,4,Pakaian Olahraga
+20,4,Perhiasan
+21,4,Make Up & Parfum
+22,4,Terapi & Pengobatan
+23,4,Perawatan
+24,4,Nutrisi & Suplemen
+25,4,Lain-lain
+26,5,Handphone
+27,5,Tablet
+28,5,Aksesoris HP & Tablet
+29,5,Fotografi
+30,5,Elektronik Rumah Tangga
+31,5,Games & Console
+32,5,Komputer
+33,5,Lampu
+34,5,TV & Audio Video
+35,6,Alat-alat Musik
+36,6,Olahraga
+37,6,Sepeda & Aksesoris
+38,6,Kerajinan Tangan
+39,6,Barang Antik
+40,6,Buku & Majalah
+41,6,Koleksi
+42,6,Mainan Hobi
+43,6,Musik & Film
+44,6,Hewan Peliharaan
+45,7,Makanan & Minuman
+46,7,Furniture
+47,7,Dekorasi Rumah
+48,7,Konstruksi & Taman
+49,7,Jam
+50,7,Lampu
+51,7,Perlengkapan Rumah
+52,7,Lain-lain
+53,8,Pakaian
+54,8,Perlengkapan Bayi
+55,8,Perlengkapan Ibu Bayi
+56,8,Boneka & Mainan Anak
+57,8,Buku Anak-anak
+58,8,Stroller
+59,8,Lain-lain
+60,9,Peralatan Kantor
+61,9,Perlengkapan Usaha
+62,9,Mesin & Keperluan Industri
+63,9,Stationery
+64,9,Lain-lan
