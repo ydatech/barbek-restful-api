@@ -14,7 +14,7 @@ class m160911_131907_create_subkategori_table extends Migration
     /**
      * @inheritdoc
      */
-    public function up()
+    public function safeUp()
     {
         $this->createTable('subkategori', [
             'id' => $this->primaryKey(),
@@ -61,7 +61,7 @@ class m160911_131907_create_subkategori_table extends Migration
     /**
      * @inheritdoc
      */
-    public function down()
+    public function safeDown()
     {
 
          // path tempat file csv berada

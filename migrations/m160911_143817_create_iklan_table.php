@@ -16,7 +16,7 @@ class m160911_143817_create_iklan_table extends Migration
     /**
      * @inheritdoc
      */
-    public function up()
+    public function safeUp()
     {
         $this->createTable('iklan', [
             'id' => $this->primaryKey(),
@@ -104,7 +104,7 @@ class m160911_143817_create_iklan_table extends Migration
     /**
      * @inheritdoc
      */
-    public function down()
+    public function safeDown()
     {
         // drops foreign key for table `user`
         $this->dropForeignKey(
