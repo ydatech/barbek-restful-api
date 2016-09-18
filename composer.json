@@ -18,7 +18,8 @@
         "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "league/csv": "^8.1"
+        "league/csv": "^8.1",
+        "firebase/php-jwt": "^4.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
