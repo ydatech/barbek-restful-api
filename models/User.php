@@ -29,7 +29,12 @@ class User extends ActiveRecord implements IdentityInterface
     public function behaviors()
     {
         return [
-        TimestampBehavior::className(),
+        
+        [
+        'class' => TimestampBehavior::className(),
+        'createdAtAttribute' => 'dibuat_pada',
+        'updatedAtAttribute' => 'diperbarui_pada',
+        ],
         ];
     }
     
