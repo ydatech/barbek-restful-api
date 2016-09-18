@@ -156,7 +156,7 @@ class User extends ActiveRecord implements IdentityInterface
         'jti'  => $this->getId(),       // Json Token Id: user id
         'iss'  => $hostInfo,       // Issuer : domain dimana token digenerate/dibuat
         'aud' => $hostInfo,    // audience : domain dimana token bisa digunakan
-        'nbf'  => $notBefore,        // Not before : token dapat digunakan sebelum
+        'nbf'  => $notBefore,        // Not before : token tidak dapat digunakan sebelum
         'exp'  => $expiredTime,           // Expired time : waktu token expired
         ];
         
