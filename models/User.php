@@ -29,7 +29,6 @@ class User extends ActiveRecord implements IdentityInterface
     public function behaviors()
     {
         return [
-        
         [
         'class' => TimestampBehavior::className(),
         'createdAtAttribute' => 'dibuat_pada',
@@ -37,6 +36,8 @@ class User extends ActiveRecord implements IdentityInterface
         ],
         ];
     }
+    
+    
     
     
     /**
@@ -145,7 +146,7 @@ class User extends ActiveRecord implements IdentityInterface
         $secret      = base64_encode(Yii::$app->params['JWT']['secret_key']);
         $issuedAt = time();
         $notBefore = $issuedAt;
-        $expiredTime = $currentTime + (3600 * 24 * 30); // Expired dalam 30 hari
+        $expiredTime = $issuedAt + (3600 * 24 * 30); // Expired dalam 30 hari
         $hostInfo    = Yii::$app->request->hostInfo;
         
         
@@ -162,5 +163,19 @@ class User extends ActiveRecord implements IdentityInterface
         
         
         return JWT::encode($token, $secret, Yii::$app->params['JWT']['algorithm']);
+    }
+    /*
+    * Override method fields untuk menghilangkan password dari response data
+    *
+    */
+
+    public function fields()
+    {
+        $fields = parent::fields();
+        
+        // remove fields that contain sensitive information
+        unset($fields['password']);
+        
+        return $fields;
     }
 }

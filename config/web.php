@@ -16,7 +16,9 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
+            'enableAutoLogin' => false,
+            'enableSession'=>false,
+	        'loginUrl'=>null,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -38,14 +40,32 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
+
+        'response' => [
+            'class' => 'yii\web\Response',
+            'on beforeSend' => function ($event) {
+                $response = $event->sender;
+                if ($response->data !== null) {
+                    $response->data = [
+                    'success' => $response->isSuccessful,
+                    'data' => $response->data,
+                    ];
+                    $response->statusCode = 200;
+                }
+            },
+        ],
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
+            'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
+                'GET '=>'site/index',
+                'POST auth/signup'=>'auth/signup',
+                'POST auth/login'=>'auth/login'
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];
