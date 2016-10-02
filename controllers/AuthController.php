@@ -3,26 +3,11 @@
 namespace app\controllers;
 
 use Yii;
-use yii\rest\Controller;
-use yii\filters\Cors;
 use app\models\SignupForm;
 use app\models\LoginForm;
 
 class AuthController extends Controller{
-    // Override behaviors() untuk menambahkan \yii\filters\Cors
-    public function behaviours(){
-        $behaviors = parent::behaviors();
-        
-        // unset / hapus authenticator
-        unset($behaviors['authenticator']);
-        
-        // tambahkan cors filter
-        $behaviors['corsFilter'] = [
-        'class' => Cors::className(),
-        ];
-        return $behaviors;
-        
-    }
+
     
     public function verbs(){
         // validasi http verbs untuk action signup dan login

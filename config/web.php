@@ -62,7 +62,9 @@ $config = [
             'rules' => [
                 'GET '=>'site/index',
                 'POST auth/signup'=>'auth/signup',
-                'POST auth/login'=>'auth/login'
+                'POST auth/login'=>'auth/login',
+                'GET lokasi'=>'lokasi/index',
+                'GET kategori'=>'kategori/index'
             ],
         ],
         
@@ -70,6 +72,7 @@ $config = [
     'params' => $params,
 ];
 
+/*
 if (YII_ENV_DEV) {
     // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
@@ -82,5 +85,5 @@ if (YII_ENV_DEV) {
         'class' => 'yii\gii\Module',
     ];
 }
-
+*/
 return $config;

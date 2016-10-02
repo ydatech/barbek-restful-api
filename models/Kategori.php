@@ -46,7 +46,7 @@ class Kategori extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSubkategoris()
+    public function getSubkategori()
     {
         return $this->hasMany(Subkategori::className(), ['kategori_id' => 'id']);
     }
