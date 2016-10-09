@@ -4,9 +4,10 @@ namespace app\controllers;
 
 
 use yii\filters\Cors;
+use yii\filters\auth\HttpBearerAuth;
 
 
-class Controller extends  \yii\rest\Controller{
+class ActiveController extends  \yii\rest\ActiveController{
     
     // Override behaviors() untuk menambahkan \yii\filters\Cors
     public function behaviors(){
@@ -19,6 +20,14 @@ class Controller extends  \yii\rest\Controller{
         $behaviors['corsFilter'] = [
         'class' => Cors::className(),
         ];
+        
+        //tambahkan HttpBearerAuth untuk autentikasi berbasis token
+        $behaviors['authenticator'] = [
+        'class' => HttpBearerAuth::className(),
+        'except'=>['options']
+        ];
+        
+       
         return $behaviors;
         
     }

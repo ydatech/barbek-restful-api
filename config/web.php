@@ -64,7 +64,12 @@ $config = [
                 'POST auth/signup'=>'auth/signup',
                 'POST auth/login'=>'auth/login',
                 'GET lokasi'=>'lokasi/index',
-                'GET kategori'=>'kategori/index'
+                'GET kategori'=>'kategori/index',
+                [
+                    'class'=>'yii\rest\UrlRule', 
+                    'controller' => ['kontak'=>'kontak']
+                ]
+
             ],
         ],
         
